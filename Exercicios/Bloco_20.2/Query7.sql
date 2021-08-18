@@ -6,3 +6,4 @@ select title, release_year, rating from film;
 ## filmes, ano de lançamento e também a classificação
 select count(title) from film;
 ## quantos filmes
+select distinct last_name from actor;
