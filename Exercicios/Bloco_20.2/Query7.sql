@@ -12,3 +12,4 @@ select count(distinct last_name) from actor;
 ## numero de last name de atores
 select last_name from actor
 order by last_name desc;
+## ordenando os last_name em ordem decrescente
