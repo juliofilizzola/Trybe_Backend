@@ -15,3 +15,5 @@ order by last_name desc;
 ## ordenando os last_name em ordem decrescente
 select * from language limit 5 offset 1;
 ## mostrando 5 idiomas cadastrados menos o inglish
+select title, release_year,rental_duration, replacement_cost from film
+order by rental_duration;
