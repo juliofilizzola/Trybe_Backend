@@ -8,3 +8,4 @@ select count(title) from film;
 ## quantos filmes
 select distinct last_name from actor;
 ## sobrenomes listados e não repetidos
+select count(distinct last_name) from actor;
