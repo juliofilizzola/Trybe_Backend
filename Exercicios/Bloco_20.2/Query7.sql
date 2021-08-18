@@ -17,3 +17,4 @@ select * from language limit 5 offset 1;
 ## mostrando 5 idiomas cadastrados menos o inglish
 select title, release_year,rental_duration, replacement_cost from film
 order by rental_duration;
+## rie uma query para encontrar os 20 primeiros filmes , incluindo o título , o ano de lançamento , a duração , a classificação indicativa e o custo de substituição 
