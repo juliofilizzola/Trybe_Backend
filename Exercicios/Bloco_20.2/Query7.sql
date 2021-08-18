@@ -10,3 +10,5 @@ select distinct last_name from actor;
 ## sobrenomes listados e não repetidos
 select count(distinct last_name) from actor;
 ## numero de last name de atores
+select last_name from actor
+order by last_name desc;
