@@ -9,3 +9,5 @@ USE Scientists;
 select name from Scientists;
 
 select Name 'Nome do projeto', Hours 'Tempo de Trabalho' from Projects;
+
+select name from Scientists order by name;
