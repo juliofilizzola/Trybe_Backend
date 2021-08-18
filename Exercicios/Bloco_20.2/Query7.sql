@@ -7,3 +7,4 @@ select title, release_year, rating from film;
 select count(title) from film;
 ## quantos filmes
 select distinct last_name from actor;
+## sobrenomes listados e não repetidos
