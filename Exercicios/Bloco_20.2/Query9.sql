@@ -7,3 +7,5 @@ select 10 * 5;
 USE Scientists;
 
 select name from Scientists;
+
+select Name 'Nome do projeto', Hours 'Tempo de Trabalho' from Projects;
