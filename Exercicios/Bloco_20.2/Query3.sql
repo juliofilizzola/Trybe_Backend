@@ -1,0 +1,4 @@
+USE Escola;
+SELECT * FROM Alunos;
+SELECT DISTINCT Nome FROM Alunos;
+SELECT DISTINCT Idade FROM Alunos;
