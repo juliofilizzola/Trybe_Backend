@@ -19,3 +19,5 @@ select concat ('O projeto ', Name,' precisou de ', Hours, ' horas para ser concl
 select * from Projects order by Hours desc;
 
 select * from Projects order by Hours desc Limit 3;
+
+SELECT distinct Project FROM Scientists.AssignedTo;
