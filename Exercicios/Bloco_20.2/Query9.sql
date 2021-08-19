@@ -17,3 +17,5 @@ Select * from Projects order by Name desc;
 select concat ('O projeto ', Name,' precisou de ', Hours, ' horas para ser concluído.') from Projects;
 
 select * from Projects order by Hours desc;
+
+select * from Projects order by Hours desc Limit 3;
