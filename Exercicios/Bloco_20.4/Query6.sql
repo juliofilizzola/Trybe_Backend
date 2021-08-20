@@ -17,3 +17,10 @@ UPDATE Movies
 SET director = 'Andrew Staton'
 WHERE director = 'John Lasseter';
 SELECT * FROM Movies;
+
+UPDATE Movies
+SET title = 'Ratatouille'
+WHERE title = 'ratatui';
+
+SELECT * FROM Movies;
+
