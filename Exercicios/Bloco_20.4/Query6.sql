@@ -30,4 +30,13 @@ INSERT INTO BoxOffice (movie_id, rating, domestic_sales, international_sales)
         (11, 9.9, 290000000, 280000000);
         
 SELECT * FROM BoxOffice;
-        
+
+DELETE FROM BoxOffice
+	WHERE movie_id = 11;
+    
+SELECT * FROM BoxOffice;
+
+DELETE FROM Movies
+	WHERE title = 'WALL-E';
+
+SELECT * FROM Movies;
