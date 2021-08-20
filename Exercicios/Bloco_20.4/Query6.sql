@@ -40,3 +40,4 @@ DELETE FROM Movies
 	WHERE title = 'WALL-E';
 
 SELECT * FROM Movies;
+        
