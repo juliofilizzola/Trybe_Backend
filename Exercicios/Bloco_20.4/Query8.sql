@@ -15,15 +15,11 @@ SELECT * FROM Movies;
 
     
 SELECT * FROM BoxOffice;
+DELETE FROM pixar.boxoffice
+WHERE movie_id IN (SELECT id FROM pixar.movies
+WHERE length_minutes < 100);
 
-DELETE FROM BoxOffice
-	WHERE movie_id = 12;
-DELETE FROM BoxOffice
-	WHERE movie_id = 7;
-DELETE FROM BoxOffice
-	WHERE movie_id = 8;
-DELETE FROM Movies
-	WHERE length_minutes < 100;
-
+DELETE FROM pixar.movies
+WHERE length_minutes < 100;
 SELECT * FROM Movies;
     
