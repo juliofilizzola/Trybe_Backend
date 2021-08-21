@@ -1,0 +1,8 @@
+USE sakila;
+
+SET SQL_SAFE_UPDATES = 0;
+
+DELETE FROM film_text
+WHERE title = 'ACADEMY DINOSAUR';
+
+SELECT * FROM film_text;
