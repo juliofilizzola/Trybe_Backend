@@ -27,3 +27,5 @@ SET SQL_SAFE_UPDATES = 0;
 UPDATE employees SET PHONE_NUMBER = REPLACE(PHONE_NUMBER, 515, 777) WHERE PHONE_NUMBER LIKE '515%';
 -- atividade 12
 SELECT * FROM employees WHERE LENGTH(FIRST_NAME) >= 8;
+-- atividade 13
+SELECT employee_id, first_name, YEAR(hire_date) 'ano' FROM employees; 
