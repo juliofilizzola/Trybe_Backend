@@ -28,4 +28,7 @@ UPDATE employees SET PHONE_NUMBER = REPLACE(PHONE_NUMBER, 515, 777) WHERE PHONE_
 -- atividade 12
 SELECT * FROM employees WHERE LENGTH(FIRST_NAME) >= 8;
 -- atividade 13
-SELECT employee_id, first_name, YEAR(hire_date) 'ano' FROM employees; 
+SELECT employee_id, first_name, YEAR(hire_date) 'ano' FROM employees;
+-- atividade 14
+SELECT employee_id, first_name, DAY(hire_date) 'dia de contrato' FROM employees;
+
