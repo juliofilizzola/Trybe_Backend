@@ -5,3 +5,4 @@ SELECT REPLACE(title, 'ACADEMY', 'FOO') FROM sakila.film WHERE film_id = 1;
 SELECT LEFT(title, 7) FROM sakila.film WHERE film_id = 1;
 SELECT RIGHT(title, 8) FROM sakila.film WHERE film_id = 1;
 SELECT LENGTH(title) FROM sakila.film WHERE film_id = 1;
+SELECT SUBSTRING(title, 5, 2) FROM sakila.film WHERE film_id = 1;
