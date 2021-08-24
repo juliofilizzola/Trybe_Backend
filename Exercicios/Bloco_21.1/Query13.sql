@@ -32,4 +32,6 @@ SELECT employee_id, first_name, YEAR(hire_date) 'ano' FROM employees;
 -- atividade 14
 SELECT employee_id, first_name, DAY(hire_date) 'dia de contrato' FROM employees;
 -- atividade 15
-SELECT employee_id, first_name, MONTH(hire_date) 'mes de contrato' FROM employees; 
+SELECT employee_id, first_name, MONTH(hire_date) 'mes de contrato' FROM employees;
+-- atividade 16
+SELECT UCASE(first_name) AS 'PRIMEIRO NOME' FROM employees;
