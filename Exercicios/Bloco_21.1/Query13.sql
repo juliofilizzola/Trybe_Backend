@@ -37,3 +37,5 @@ SELECT employee_id, first_name, MONTH(hire_date) 'mes de contrato' FROM employee
 SELECT UCASE(first_name) AS 'PRIMEIRO NOME' FROM employees;
 -- atividade 17
 SELECT first_name as 'name' FROM employees WHERE hire_date BETWEEN '1987-07-01'  AND '1987-07-31';
+-- atividade 18
+SELECT first_name, last_name, DATEDIFF(CURRENT_DATE(), HIRE_DATE ) AS 'DIAS TRABALHANDO' FROM employees;
