@@ -7,3 +7,5 @@ SELECT s.first_name, s.last_name, a.address FROM staff AS s INNER JOIN address A
 SELECT c.customer_id, c.first_name, c.email, a.address_id, a.address FROM customer AS c 
 	INNER JOIN address AS a ON c.address_id = a.address_id LIMIT 100;
 -- exemplo 4
+SELECT c.first_name, c.email, c.address_id, a.address FROM customer AS c 
+	INNER JOIN address AS a ON c.address_id = a.address_id WHERE c.first_name LIKE '%rene%';
