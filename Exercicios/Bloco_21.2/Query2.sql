@@ -9,3 +9,7 @@ SELECT c.customer_id, c.first_name, c.email, a.address_id, a.address FROM custom
 -- exemplo 4
 SELECT c.first_name, c.email, c.address_id, a.address FROM customer AS c 
 	INNER JOIN address AS a ON c.address_id = a.address_id WHERE c.first_name LIKE '%rene%';
+-- exemplo 5
+SELECT c.first_name, COUNT(a.address) AS numero FROM customer AS c 
+	INNER JOIN address AS a ON c.address_id = a.address_id GROUP BY c.first_name;
+
