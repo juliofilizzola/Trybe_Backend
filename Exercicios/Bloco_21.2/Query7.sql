@@ -28,3 +28,8 @@ SELECT rating FROM BoxOffice WHERE movie_id IN(SELECT id FROM Movies WHERE year 
 
 SELECT t.name, t.location FROM Theater AS t
 	WHERE EXISTS( SELECT * FROM Movies WHERE Movies.theater_id = t.id);
+    
+-- atividade 9
+
+SELECT t.name, t.location FROM Theater AS t
+	WHERE NOT EXISTS( SELECT * FROM Movies WHERE Movies.theater_id = t.id);
