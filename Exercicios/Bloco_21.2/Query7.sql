@@ -16,4 +16,8 @@ SELECT t.name, t.location, m.title, m.director, m.year, m.length_minutes FROM Th
 SELECT t.name, t.location, m.title, m.director, m.year, m.length_minutes FROM Theater t 
 	RIGHT JOIN Movies AS m ON t.id = m.theater_id ORDER BY t.name;
 
+-- atividade 6
+
+SELECT title FROM Movies WHERE id IN (SELECT movie_id FROM BoxOffice WHERE rating > 7.5);
+
     
