@@ -23,3 +23,8 @@ SELECT m.title FROM Movies m INNER JOIN BoxOffice b ON b.movie_id = m.id;
 -- ativdade 7
 
 SELECT rating FROM BoxOffice WHERE movie_id IN(SELECT id FROM Movies WHERE year > 2009);
+
+-- atividade 8
+
+SELECT t.name, t.location FROM Theater AS t
+	WHERE EXISTS( SELECT * FROM Movies WHERE Movies.theater_id = t.id);
