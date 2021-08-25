@@ -12,7 +12,7 @@ SELECT c.first_name, c.email, c.address_id, a.address FROM customer AS c
 -- exemplo 5
 SELECT c.first_name, COUNT(a.address) AS numero FROM customer AS c 
 	INNER JOIN address AS a ON c.address_id = a.address_id GROUP BY c.first_name;
--- exemplos 6 
+-- exemplo 6 
 SELECT s.first_name, s.last_name, AVG(p.amount) AS media FROM staff AS s 
 	INNER JOIN payment AS p ON s.staff_id = p.staff_id GROUP BY s.first_name, s.last_name;
     
