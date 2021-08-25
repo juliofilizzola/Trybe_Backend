@@ -15,3 +15,9 @@ UNION
 UNION
 (SELECT first_name FROM customer LIMIT 5 OFFSET 15)
 ORDER BY first_name;
+
+-- exemplo 4
+(SELECT first_name, last_name FROM customer ORDER BY first_name, last_name LIMIT 60)
+UNION
+(SELECT first_name, last_name FROM actor ORDER BY first_name, last_name LIMIT 60)
+ORDER BY first_name, last_name LIMIT 15 OFFSET 45; 
