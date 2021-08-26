@@ -1,1 +1,9 @@
 USE sakila;
+DELIMITER $$
+
+CREATE PROCEDURE ShoAllActor()
+BEGIN
+	SELECT * FROM sakila.actor;
+END $$
+
+DELIMITER ;
