@@ -1,0 +1,1 @@
+CALL ShowAverage('ACADEMY DINOSUAR', @media_de_dias);
