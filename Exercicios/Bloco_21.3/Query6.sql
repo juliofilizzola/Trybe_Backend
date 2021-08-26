@@ -1,1 +1,2 @@
-CALL ShowAverage('ACADEMY DINOSUAR', @media_de_dias);
+CALL ShowAverage('ACADEMY DINOSAUR', @media_de_dias);
+SELECT @media_de_dias;
