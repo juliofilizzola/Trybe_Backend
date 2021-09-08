@@ -1,0 +1,2 @@
+use('superHero')
+db.['super-hero'].deleteMany({ "publisher": 'Sony Pictures'}).limit(1)

@@ -1,0 +1,3 @@
+use('superHero')
+db.['super-hero'].find({
+$nor: [{ race: "Human" },{ "aspects.height": { $gt: 180 } }]}).pretty();

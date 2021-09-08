@@ -1,0 +1,2 @@
+use('superHero')
+db.['super-hero'].count({ 'aspects.hairColor': {$exists: true}});
