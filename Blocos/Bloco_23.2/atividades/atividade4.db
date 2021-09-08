@@ -1,4 +1,4 @@
 use('superHero')
 db.['super-hero'].count(
-    { "aspects.height": { $lt: 180 } }
+    { "aspects.height": { $lte: 180 } }
 )
