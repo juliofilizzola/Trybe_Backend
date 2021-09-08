@@ -1,0 +1,4 @@
+use('superHero')
+db.['super-hero'].find(
+    { "aspects.eyeColor": { $in: [ "black", "No Hair"]} }
+)
