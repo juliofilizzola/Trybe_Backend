@@ -1,0 +1,4 @@
+use('superHero')
+db.['super-hero'].count(
+    { "aspects.height": { $not: { $gt: 180 } } }
+)
