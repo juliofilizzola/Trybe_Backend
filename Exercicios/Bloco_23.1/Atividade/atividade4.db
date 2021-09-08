@@ -1,3 +1,0 @@
-db.bios.find({ "name.first": "John" }).pretty()
-
--- Pretty é uma função de melhor visualização da busca.
