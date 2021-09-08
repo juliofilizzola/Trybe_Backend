@@ -1,0 +1,4 @@
+use('superHero')
+db.['super-hero'].count(
+    { "aspects.eyeColor": { $in: [ "black", "No Hair"]} }
+)
