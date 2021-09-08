@@ -1,0 +1,2 @@
+use('superHero')
+db.['super-hero'].count({ race: {$exists: false}});
