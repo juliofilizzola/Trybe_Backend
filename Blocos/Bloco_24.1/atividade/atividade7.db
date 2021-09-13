@@ -1,0 +1,2 @@
+use("trybe");
+db.movies.updateMany({"title": "Batman"}, {$rename: { "budget": "estimatedBudget"}});
