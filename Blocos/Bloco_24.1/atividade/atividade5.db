@@ -1,2 +1,2 @@
 use("trybe");
-db.movies.updateMany({"title": "Home Alone "}, {$mul: {"budget": 5}})
+db.movies.updateMany({"title": "Home Alone "}, {$inc: {"budget": 5}})

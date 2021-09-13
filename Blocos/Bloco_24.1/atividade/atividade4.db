@@ -1,2 +1,2 @@
 use("trybe");
-db.movies.updateMany({"title": "Batman"}, {$mul: {"imdbRating": 2}})
+db.movies.updateMany({"title": "Batman"}, {$inc: {"imdbRating": 2}})
