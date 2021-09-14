@@ -1,0 +1,2 @@
+use("trybe");
+db.movies.updateMany({"title": "Batman"}, {$inc: {"imdbRating": 2}})
