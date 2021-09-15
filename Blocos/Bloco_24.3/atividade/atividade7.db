@@ -1,0 +1,5 @@
+use('trybe');
+db.movies.find(
+  { rating: { $elemMatch: { $gt: 64, $lte: 105, $mod: [9, 0]}}},
+  {_id: 0, title: 1, rating: 1 }
+);
