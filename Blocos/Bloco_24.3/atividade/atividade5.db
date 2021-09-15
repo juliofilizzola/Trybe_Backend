@@ -1,0 +1,10 @@
+use('trybe');
+db.movies.updateOne(
+  { title: 'Home Alone'},
+  { $push: {
+      rating: {
+        $each: [200, 99, 65]
+      }
+    }
+  }
+);
