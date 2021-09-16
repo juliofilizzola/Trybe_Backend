@@ -1,0 +1,8 @@
+use('trybe');
+db.movies.find(
+  {
+    rating: { $elemMatch: { $gt: 104} },
+    category: { $all: ["adventure"] }
+  },
+  {_id: 0, title: 1, rating: 1, category: 1}
+);
