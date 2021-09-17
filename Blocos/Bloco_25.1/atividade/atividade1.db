@@ -1,10 +1,7 @@
 use("trybeExercies");
 
 db.cliente.aggregate([
- { $lookup: {
-    from: "transactions",
-    localField: "nome",
-    foreignField: "from", 
-    as: "transactions_history",
-  }}
+ { $match: {
+   sexo: "MASCULINO"
+ }}
 ])
