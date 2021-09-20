@@ -1,0 +1,5 @@
+use("trybeExercies");
+
+db.produtos.count();
+db.vendas.count();
+db.cliente.count();

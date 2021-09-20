@@ -1,0 +1,7 @@
+use("trybeExercies");
+
+db.cliente.aggregate([
+ { $match: {
+   sexo: "MASCULINO"
+ }}
+])
