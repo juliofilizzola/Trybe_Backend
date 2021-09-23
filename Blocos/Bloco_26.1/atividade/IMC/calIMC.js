@@ -25,5 +25,5 @@ const calIMC = () => {
     console.log("Obesidade grau III");
   } 
 }
-calIMC();
+// calIMC();
 module.exports = calIMC;
