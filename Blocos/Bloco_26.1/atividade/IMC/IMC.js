@@ -1,3 +1,9 @@
-const calIMC = (peso, altura) => peso * altura/2;
+const calIMC = (peso, altura) => {
+  console.log(`Peso: ${peso}, Altura: ${altura}`);
+
+  const imc = (peso / Math.pow(altura / 100, 2)).toFixed(2);
+
+  console.log(`IMC: ${imc}`);
+}
 
 module.exports = calIMC;
