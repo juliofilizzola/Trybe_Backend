@@ -1,4 +1,9 @@
-const calIMC = (peso, altura) => {
+const readline = require('readline-sync');
+
+const calIMC = () => {
+  const peso = readline.question('Qual é o seu peso? ');
+  const altura = readline.questionInt('Qual a sua altura? ');
+
   console.log(`Peso: ${peso}, Altura: ${altura}`);
 
   const imc = (peso / Math.pow(altura / 100, 2)).toFixed(2);
@@ -20,5 +25,5 @@ const calIMC = (peso, altura) => {
     console.log("Obesidade grau III");
   } 
 }
-// calIMC(92, 168);
+calIMC();
 module.exports = calIMC;
