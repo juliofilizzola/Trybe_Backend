@@ -6,7 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "imc": "node IMC.js"
+    "imc": "node IMC.js",
+    "velocidade": "node Velocidade.js",
+    "sorteio": "node sorteio.js"
+
   },
   "author": "Julio Filizzola",
   "license": "ISC",

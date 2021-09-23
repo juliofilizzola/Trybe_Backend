@@ -1,3 +1,4 @@
 const IMC = require('./IMC');
+const Velocidade = require('./Velocidade');
 
-module.exports = { IMC };
+module.exports = { IMC, Velocidade };
