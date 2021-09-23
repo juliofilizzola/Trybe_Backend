@@ -1,3 +1,7 @@
-const {IMC} = require('./IMC');
+const meuModule = require('./IMC');
 
-IMC();
+console.log(meuModule)
+
+meuModule.IMC()
+
+// calIMC()
