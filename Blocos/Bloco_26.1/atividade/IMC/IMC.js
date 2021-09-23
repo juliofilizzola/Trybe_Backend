@@ -5,5 +5,5 @@ const calIMC = (peso, altura) => {
 
   console.log(`IMC: ${imc}`);
 }
-
+// calIMC(92, 168);
 module.exports = calIMC;
