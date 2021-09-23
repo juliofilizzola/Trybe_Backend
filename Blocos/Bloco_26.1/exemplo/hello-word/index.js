@@ -1,1 +1,5 @@
-console.log("Hello World!");
+const thisConsole = () => {
+  console.log("Hello Wold!");
+}
+
+module.exports = thisConsole;
