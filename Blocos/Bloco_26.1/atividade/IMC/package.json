@@ -1,0 +1,19 @@
+{
+  "name": "imc",
+  "version": "1.0.0",
+  "description": "Atividade de fixação ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "imc": "node IMC.js",
+    "velocidade": "node Velocidade.js",
+    "sorteio": "node sorteio.js"
+
+  },
+  "author": "Julio Filizzola",
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}

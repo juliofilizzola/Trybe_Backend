@@ -1,0 +1,12 @@
+{
+  "name": "hello-word",
+  "version": "1.0.0",
+  "description": "Meu primiro pacotte Node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Julio Filizzola",
+  "license": "ISC"
+}
