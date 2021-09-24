@@ -1,1 +1,1 @@
-Isso é um teste com Node.js e sua funções.
+eu to exemplificando o método writeFile do node.js, sendo ele uma função de escrita do documento. com valores de resposta e de erro.
