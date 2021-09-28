@@ -14,10 +14,13 @@ describe('verificando function', () => {
 });
 
 describe('Verificando a funcionalidade da função', () => {
-  it("testando se passardo o numero 1, o retorno vai ser Positivo", () => {
+  it("testando se passado o numero 1, o retorno vai ser Positivo", () => {
     expect(numberThis(1)).to.be.equal(Positivo);
   });
-  it("testando se passardo o numero 0, o retorno vai ser Neutro", () => {
+  it("testando se passado o numero 0, o retorno vai ser Neutro", () => {
     expect(numberThis(0)).to.be.equal(Neutro);
+  });
+  it("testando se passado o numero -1, o retorno vai ser Negativo", () => {
+    expect(numberThis(-1)).to.be.equal(Negativo);
   });
 });
