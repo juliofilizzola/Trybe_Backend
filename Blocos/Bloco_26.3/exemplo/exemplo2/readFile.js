@@ -8,8 +8,6 @@ const readFile = (nameDoArquivo) => {
   } catch (err) {
     return null;
   }
-}
+};
 
-module.exports = () => {
-  //
-}
+module.exports = readFile;
