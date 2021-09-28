@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const readFile = (nameDoArquivo) => {
+function leArquivo(nomeDoArquivo) {
   try {
     const conteudoDoArquivo = fs.readFileSync(nomeDoArquivo, 'utf8');
 
@@ -8,6 +8,6 @@ const readFile = (nameDoArquivo) => {
   } catch (err) {
     return null;
   }
-};
+}
 
-module.exports = readFile;
+module.exports = leArquivo;
