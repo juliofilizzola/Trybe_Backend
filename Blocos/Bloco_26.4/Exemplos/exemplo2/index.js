@@ -12,7 +12,7 @@ const drinks = [
 ];
 
 app.get('/drinks', function (req, res) {
-  const drink = drinks.sort((a, b) =>  b.name - a.name);
+  const drink = drinks.sort((a, b) =>  a.name.localeCompare(b.name) );
   res.json(drink);
 });
 
