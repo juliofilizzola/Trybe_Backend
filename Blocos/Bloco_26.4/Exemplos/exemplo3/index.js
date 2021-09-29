@@ -20,6 +20,12 @@ app.listen(3001, () => {
   console.log('Aplicação ouvindo na porta 3001');
 });
 
+app.get('/drinks/search', function (req, res) {
+  const { name, maxPrice } = req.query;
+  const filteredRecipes = drinks.filter((r) => r.name.includes(name) && r.price < parseInt(maxPrice));
+  res.status(200).json(filteredRecipes);
+})
+
 app.get('/drinks/:id', function (req, res) {
   const { id } = req.params;
   const drink = drinks.find((r) => r.id === parseInt(id));
@@ -28,3 +34,7 @@ app.get('/drinks/:id', function (req, res) {
 
   res.status(200).json(drink);
 });
+
+
+
+
