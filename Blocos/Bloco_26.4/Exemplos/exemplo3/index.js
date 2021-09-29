@@ -21,8 +21,8 @@ app.listen(3001, () => {
 });
 
 app.get('/drinks/search', function (req, res) {
-  const { name, maxPrice } = req.query;
-  const filteredRecipes = drinks.filter((r) => r.name.includes(name) && r.price < parseInt(maxPrice));
+  const { name, maxPrice, minPrice } = req.query;
+  const filteredRecipes = drinks.filter((r) => r.name.includes(name) && r.price > parseInt(minPrice) && r.price < parseInt(maxPrice));
   res.status(200).json(filteredRecipes);
 })
 
