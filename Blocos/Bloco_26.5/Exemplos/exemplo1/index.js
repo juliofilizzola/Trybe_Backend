@@ -18,6 +18,19 @@ function validateName(req, res, next) {
   next(); 
 };
 
+function validatePrice(req, res, next) {
+  const { price } = req.body;
+  if(!price || price < 0 ) return res.status(400).json({ message: 'Invalid Price!' });
+
+  next(); 
+};
+
+app.get('/recipes/search', validatePrice, function (req, res) {
+  const { name, price } = req.query;
+  const filteredRecipes = recipes.filter((r) => r.name.includes(name) && r.preco < parseInt(price));
+  res.status(200).json(filteredRecipes);
+})
+
 app.post('/recipes', validateName, function (req, res) {
   const { id, name, price } = req.body;
   recipes.push({ id, name, price});
