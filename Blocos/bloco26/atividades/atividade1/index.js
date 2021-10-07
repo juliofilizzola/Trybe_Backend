@@ -4,7 +4,7 @@ const router = require('./router/create');
 const port = 3000
 
 
-app.get('/', (req, res) => res.send('Hello World!'))
+app.get('/', (req, res) => res.status(200).send('Hello World!'))
 
 app.use('/', router);
 
