@@ -13,7 +13,7 @@ app.get('/authors', async (req, res) => {
 app.get('/authors/:id', async (req, res) => {
   const { id } = req.params;
   const authors = await Author.getAuthorById(id);
-
+  
   res.status(200).json(authors);
 });
 
