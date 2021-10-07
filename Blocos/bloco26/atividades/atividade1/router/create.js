@@ -1,9 +1,6 @@
 const router = require('express').Router();
-const { getAll } = require('../models/users');
+const { getUser } = require('../middleware/middleware');
 
-router.get('/users', async (req, res) => {
-  const user = await getAll();
-  res.status(200).json(user);
-});
+router.get('/users', getUser);
 
 module.exports = router;
