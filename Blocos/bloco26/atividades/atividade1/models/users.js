@@ -39,5 +39,9 @@ const getUserByEmail = async (id) => {
   });
 }
 
+const create = async (firstName, lastName, email, password) => {
+  await connection()
+    .then((db) => db.collection('users').insertOne({firstName, lastName, email, password}));
+}
 
-module.exports = { getAll, getUserByEmail };
+module.exports = { getAll, getUserByEmail, create };
