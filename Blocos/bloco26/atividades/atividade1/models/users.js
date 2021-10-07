@@ -1,3 +1,4 @@
+const { ObjectId } = require('mongodb');
 const connection = require('./connection');
 
 const getNewUser = ({id, firstName, lastName}) => {
@@ -25,7 +26,7 @@ const getAll = async () => {
 };
 
 const getUserByEmail = async (id) => {
-  const userData = await connect()
+  const userData = await connection()
     .then((db) => db.collection('users').findOne(ObjectId(id)));
   if(!userData) return null;
 
