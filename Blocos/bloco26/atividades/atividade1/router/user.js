@@ -1,9 +1,8 @@
 const router = require('express').Router();
-const { getUser, getId } = require('../middleware/middleware');
-const { isValid } = require('../middleware/validation');
+const { getUser, getId, verification, createNewUser } = require('../middleware/middleware');
 
 router.get('/users', getUser);
 router.get('/users/:id', getId);
-router.put('/users/new', isValid);
+router.post('/users/new', verification, createNewUser);
 
 module.exports = router;

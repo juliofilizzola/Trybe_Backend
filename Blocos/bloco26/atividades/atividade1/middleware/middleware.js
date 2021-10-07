@@ -1,4 +1,5 @@
-const { getAll, getUserByEmail } = require('../models/users');
+const { getAll, getUserByEmail, create } = require('../models/users');
+const { isValid } = require('../middleware/validation');
 
 const getUser = async (req, res) => {
   const user = await getAll();
@@ -11,5 +12,19 @@ const getId = async (req, res) => {
   res.status(200).json(user);
 };
 
+const verification = async (req, res, next) => {
+  const { firstName, email, password, lastName } = req.body;
+  if(!isValid(firstName, email, password, lastName)) return res.status(400).json({message: 'Invalid'});
 
-module.exports = { getUser, getId };
+  next();
+
+}
+
+const createNewUser = async (req, res) => {
+  const { firstName, email, password, lastName } = req.body;
+  await create(firstName, lastName, email, password);
+  res.status(200).json({message: 'New user added successfully'});
+}
+
+
+module.exports = { getUser, getId, verification, createNewUser};
