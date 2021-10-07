@@ -11,4 +11,5 @@ const getId = async (req, res) => {
   res.status(200).json(user);
 };
 
+
 module.exports = { getUser, getId };
