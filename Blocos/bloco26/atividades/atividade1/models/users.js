@@ -20,10 +20,23 @@ const getAll = async () => {
           firstName,
           lastName,
         })
-      }
-      )
-    })
+      });
+    });
 };
 
+const getUserByEmail = async (id) => {
+  const userData = await connect()
+    .then((db) => db.collection('users').findOne(ObjectId(id)));
+  if(!userData) return null;
 
-module.exports = { getAll };
+  const { _id, firstName, lastName } = userData;
+
+  return getNewUser({
+    id: _id,
+    firstName, 
+    lastName
+  });
+}
+
+
+module.exports = { getAll, getUserByEmail };
