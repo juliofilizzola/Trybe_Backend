@@ -15,9 +15,7 @@ const getId = async (req, res) => {
 const verification = async (req, res, next) => {
   const { firstName, email, password, lastName } = req.body;
   if(!isValid(firstName, email, password, lastName)) return res.status(400).json({message: 'Invalid'});
-
   next();
-
 }
 
 const createNewUser = async (req, res) => {
@@ -25,6 +23,5 @@ const createNewUser = async (req, res) => {
   await create(firstName, lastName, email, password);
   res.status(200).json({message: 'New user added successfully'});
 }
-
 
 module.exports = { getUser, getId, verification, createNewUser};
