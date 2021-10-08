@@ -4,5 +4,6 @@ const { getUser, getId, verification, createNewUser } = require('../middleware/m
 router.get('/users', getUser);
 router.get('/users/:id', getId);
 router.post('/users/new', verification, createNewUser);
+router.put('/users/edit/:id');
 
 module.exports = router;
