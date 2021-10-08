@@ -46,7 +46,6 @@ const create = async (firstName, lastName, email, password) => {
 }
 
 const setUser = async (id, firstName, lastName, email, password) => {
-  const dataUser = await getUserByEmail(id);
   const updateUser = {
     id: id,
     firstName,
@@ -57,11 +56,15 @@ const setUser = async (id, firstName, lastName, email, password) => {
 
   const updatedResponse = await connection()
     .then((db) => {
-      return db.collection('users').findOneAndUpdate({ _id: id }, { $set: updateUser }, { returnOriginal: true })
+      return db.collection('users').findOneAndUpdate({ _id: ObjectId(id) }, { $set: updateUser }, { returnOriginal: true })
       .then((result) => result.value)
     });
 
   if (!updatedResponse) return null;
 };
 
-module.exports = { getAll, getUserByEmail, create, setUser };
+const setDeleteUser = async (id) => {
+  const updatedResponse = await connection()
+  .then((db) =>  db.collection('users').deleteOne({ _id: ObjectId(id) }));
+}
+module.exports = { getAll, getUserByEmail, create, setUser, setDeleteUser };

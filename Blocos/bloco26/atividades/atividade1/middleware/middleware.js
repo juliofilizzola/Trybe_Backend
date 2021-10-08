@@ -1,4 +1,4 @@
-const { getAll, getUserByEmail, create, setUser } = require('../models/users');
+const { getAll, getUserByEmail, create, setUser, setDeleteUser } = require('../models/users');
 const { isValid } = require('../middleware/validation');
 
 const getUser = async (req, res) => {
@@ -32,4 +32,10 @@ const updateUser = async (req, res) => {
 
 }
 
-module.exports = { getUser, getId, verification, createNewUser, updateUser};
+const deleteUser = async (req, res) => {
+  const { id } = req.params;
+  await setDeleteUser(id);
+  res.status(200).json({message: 'User delete successfully'});
+}
+
+module.exports = { getUser, getId, verification, createNewUser, updateUser, deleteUser};
