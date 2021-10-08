@@ -45,7 +45,7 @@ const create = async (firstName, lastName, email, password) => {
     .then((db) => db.collection('users').insertOne({firstName, lastName, email, password}));
 }
 
-const setTalker = async (id, firstName, lastName, email, password) => {
+const setUser = async (id, firstName, lastName, email, password) => {
   const dataUser = await getUserByEmail(id);
   const updateUser = getNewUser({
     id: dataUser.id,
@@ -59,4 +59,4 @@ const setTalker = async (id, firstName, lastName, email, password) => {
     .then((db) => db.collection('users').updateOne(updateUser));
 };
 
-module.exports = { getAll, getUserByEmail, create, setTalker };
+module.exports = { getAll, getUserByEmail, create, setUser };
