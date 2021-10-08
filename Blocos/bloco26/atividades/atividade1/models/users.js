@@ -1,4 +1,5 @@
 const { ObjectId } = require('mongodb');
+const router = require('../router/user');
 const connection = require('./connection');
 
 const getNewUser = ({id, firstName, lastName}) => {
@@ -44,4 +45,18 @@ const create = async (firstName, lastName, email, password) => {
     .then((db) => db.collection('users').insertOne({firstName, lastName, email, password}));
 }
 
-module.exports = { getAll, getUserByEmail, create };
+const setTalker = async (id, firstName, lastName, email, password) => {
+  const dataUser = await getUserByEmail(id);
+  const updateUser = getNewUser({
+    id: dataUser.id,
+    firstName,
+    lastName,
+    email,
+    password
+  });
+
+  await connection()
+    .then((db) => db.collection('users').updateOne(updateUser));
+};
+
+module.exports = { getAll, getUserByEmail, create, setTalker };
