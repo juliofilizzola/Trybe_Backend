@@ -47,16 +47,21 @@ const create = async (firstName, lastName, email, password) => {
 
 const setUser = async (id, firstName, lastName, email, password) => {
   const dataUser = await getUserByEmail(id);
-  const updateUser = getNewUser({
-    id: dataUser.id,
+  const updateUser = {
+    id: id,
     firstName,
     lastName,
     email,
     password
-  });
+  };
 
-  await connection()
-    .then((db) => db.collection('users').updateOne(updateUser));
+  const updatedResponse = await connection()
+    .then((db) => {
+      return db.collection('users').findOneAndUpdate({ _id: id }, { $set: updateUser }, { returnOriginal: true })
+      .then((result) => result.value)
+    });
+
+  if (!updatedResponse) return null;
 };
 
 module.exports = { getAll, getUserByEmail, create, setUser };
