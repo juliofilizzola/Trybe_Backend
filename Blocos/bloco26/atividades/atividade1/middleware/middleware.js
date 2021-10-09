@@ -2,14 +2,22 @@ const { getAll, getUserByEmail, create, setUser, setDeleteUser } = require('../c
 const { isValid } = require('../middleware/validation');
 
 const getUser = async (req, res) => {
-  const user = await getAll();
-  res.status(200).json(user);
+  try {
+    const user = await getAll();
+    res.status(200).json(user);    
+  } catch (err) {
+    console.error(err);
+  }
 };
 
 const getId = async (req, res) => {
-  const { id } = req.params
-  const user = await getUserByEmail(id);
-  res.status(200).json(user);
+  try {
+    const { id } = req.params
+    const user = await getUserByEmail(id);
+    res.status(200).json(user);
+  } catch (error) {
+  
+  }
 };
 
 const verification = async (req, res, next) => {
