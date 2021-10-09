@@ -1,4 +1,4 @@
-const { getAll, getUserByEmail, create, setUser, setDeleteUser } = require('../models/users');
+const { getAll, getUserByEmail, create, setUser, setDeleteUser } = require('../controller/users');
 const { isValid } = require('../middleware/validation');
 
 const getUser = async (req, res) => {
