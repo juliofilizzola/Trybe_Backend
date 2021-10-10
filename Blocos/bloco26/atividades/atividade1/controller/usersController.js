@@ -1,6 +1,6 @@
 const { ObjectId } = require('mongodb');
 const router = require('../router/user');
-const connection = require('./connection');
+const connection = require('../models/connection');
 
 const getNewUser = ({id, firstName, lastName}) => {
   const fullName = [ firstName, lastName ].filter((name) => name).join(" ");
