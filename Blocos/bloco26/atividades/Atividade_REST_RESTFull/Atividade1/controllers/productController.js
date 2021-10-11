@@ -1,9 +1,13 @@
 const ProductModel = require('../models/productModel');
 
 const getAllProducts = async (req, res) => {
+ try {
   const products = await ProductModel.getAll();
 
-  res.send(products);
+  res.status().send(products);
+ } catch (error) {
+   
+ }
 };
 
 const getProductID = async (req, res) => {
