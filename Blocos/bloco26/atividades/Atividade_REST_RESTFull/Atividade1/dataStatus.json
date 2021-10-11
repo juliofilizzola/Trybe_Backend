@@ -1,0 +1,15 @@
+{
+  "statusPositivos": {
+    "status200": 200,
+    "status201": 201,
+    "status202": 202,
+    "status204": 204
+  },
+  "statusNegativos": {
+    "status400": 400,
+    "status401": 401,
+    "status404": 404,
+    "status406": 406,
+    "status500": 500
+  }
+}
