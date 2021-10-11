@@ -1,4 +1,4 @@
-const connection = require('./connection');
+const connection = require('./connections');
 
 const add = async (name, brand) => {
   try {

@@ -1,13 +1,12 @@
 const ProductModel = require('../models/productModel');
+const { statusPositivos, statusNegativos } = require('../dataStatus.json');
 
 const getAllProducts = async (req, res) => {
- try {
+
   const products = await ProductModel.getAll();
 
-  res.status().send(products);
- } catch (error) {
-   
- }
+  res.status(statusPositivos.status200).send(products);
+
 };
 
 const getProductID = async (req, res) => {
