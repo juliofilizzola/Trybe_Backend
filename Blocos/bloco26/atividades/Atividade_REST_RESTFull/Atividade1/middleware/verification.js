@@ -1,11 +1,17 @@
 const verificationResponse = (products) => {
-  if(products) return true;
-  return false;
+  if(products) return false;
+  return true;
 };
 
 const verificationReturnResponse = (products) => {
-  if(products.length > 0) return true;
-  return false;
+  let obj = Object.values(products)
+  if(obj.length > 0) return false;
+  return true;
 };
 
-module.exports = { verificationResponse, verificationReturnResponse };
+const verificationRequest = (name, brand) => {
+  if(name.trim().length > 4 && brand.trim().length > 4) return false;
+  return true;
+}
+
+module.exports = { verificationResponse, verificationReturnResponse, verificationRequest };

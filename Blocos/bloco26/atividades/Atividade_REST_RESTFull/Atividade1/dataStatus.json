@@ -9,6 +9,7 @@
     "status400": 400,
     "status401": 401,
     "status404": 404,
+    "status406": 406,
     "status500": 500
   }
 }
