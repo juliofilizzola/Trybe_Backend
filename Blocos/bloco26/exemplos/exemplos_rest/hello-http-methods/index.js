@@ -2,8 +2,13 @@
 
 const axios = require('axios').default;
 
+const API_TOKEN = '2d635ea9b637ea0f27d58985cc161d64';
+
+const headers = { Authorization: API_TOKEN };
+// Aqui vamos criar um headers para especificar o queremos ou passar um token 
+
 // Para aquecer, vamos começar com uma requisição do tipo `GET`
-axios.get('https://postman-echo.com/get?param1=teste')
+axios.get('https://postman-echo.com/get?param1=teste', { headers })
   .then((response) => {
 
     // Caso esteja tudo OK, retornamos os dados
