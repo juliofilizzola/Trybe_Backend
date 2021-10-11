@@ -3,10 +3,18 @@ const ProductModel = require('../models/productModel');
 
 const router = express.router();
 
-router.get('/list-products');
-router.get('/get-by-id/:id');
-router.post('/add-user');
-router.post('/delete-user/:id');
-router.post('/update-user/:id');
+const {
+  getAllProducts,
+  getProductID,
+  addNewProduct,
+  deleteProduct,
+  updateProduct
+} = require('../controllers/productController');
+
+router.get('/list-products', getAllProducts);
+router.get('/list-products/:id', getProductID);
+router.post('/list-products', addNewProduct);
+router.delete('/list-products/:id', deleteProduct);
+router.post('/list-products/:id', updateProduct);
 
 module.exports = router;
