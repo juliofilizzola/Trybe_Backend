@@ -1,10 +1,17 @@
-const connection = require('./connection');
+const mongoConnection = require('./connection');
 
 const create = async ({ title, directedBy, releaseYear }) => {
-  const moviesCollection = await connection()
+  const moviesCollection = await mongoConnection.getConnection()
     .then((db) => db.collection('movies'));
-  const { insertId: id } = await moviesCollection.insertOne({ title, directedBy, releaseYear });
-  return { id };  
+
+  const { insertedId: id } = await moviesCollection
+    .insertOne({ title, directedBy, releaseYear });
+
+  return {
+    id,
+  };
 };
 
-models.exports = { create };
+module.exports = {
+  create,
+};

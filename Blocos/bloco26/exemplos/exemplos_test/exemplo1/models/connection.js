@@ -20,4 +20,4 @@ const getConnection = () => {
   });
 ;}
 
-module.exports = getConnection;
+module.exports = { getConnection };
