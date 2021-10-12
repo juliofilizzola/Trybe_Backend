@@ -1,4 +1,4 @@
-const connection = require('./connection');
+const connection = require('./connections');
 
 const add = async (name, brand) => {
   try {
@@ -12,7 +12,6 @@ const add = async (name, brand) => {
     return process.exit(1);
   }
 };
-
 
 const getAll = async () => {
   try {
